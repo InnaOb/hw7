@@ -43,7 +43,7 @@ class Money
             $this->getCurrency() == $money->getCurrency();
     }
 
-    public function add(Money $money)
+    public function add(Money $money) : Money
     {
         if ($this->getCurrency() != $money->getCurrency()) {
             throw new \Exception('You can\'t add different currencies');
